@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+	<title>My Mobile Photography</title>
+	
+	<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-storage.js"></script>
+	
+	
+	<link rel="apple-touch-icon" sizes="57x57" href="public/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="public/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="public/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="public/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="public/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="public/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="public/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="public/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="public/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="public/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="public/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="public/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="public/favicon/favicon-16x16.png">
+	<link rel="manifest" href="public/favicon/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="public/favicon/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+	
+	
+	<link rel="stylesheet" href="public/css/index.css">
+</head>
+<body>
+
+	<button id="loading"><img src="public/icon.png"></button>
+	
+	
+	<header>
+		<p id="title">
+			My Mobile Photography
+			<button id="menu_btn">
+				<span id="m_f"></span>
+				<span id="m_s"></span>
+				<span id="m_t"></span>
+			</button>
+		</p>
+		<nav id="menu">
+			<a href="https://biaksang.xyz" target="_blank">About Me</a>
+			<a href="https://www.instagram.com/biaksang_xyz" target="_blank">Instagram</a>
+			<a href="https://www.pexels.com/@biak-sang-717350" target="_blank">Github</a>
+			<a href="https://www.pexels.com/@biak-sang-717350" target="_blank">Pexels</a>
+			<a href="https://www.linkedin.com/in/biak-sang/" target="_blank">Linkdein</a>
+		</nav>
+	</header>
+
+	<main>
+		<div class="column" id="first"></div>
+		<div class="column" id="second"></div>
+		<div class="column" id="third"></div>
+	</main>
+	
+	
+	
+	
+	
+	
+	<script src="public/js/jquery.js"></script>
+	<script>
+		// Initialize Firebase
+		var config = {
+		apiKey: "AIzaSyDglxbovvAF5Kpxb84_Pegigcit7NA0k_U",
+		authDomain: "mymobilephotography-0.firebaseapp.com",
+		databaseURL: "https://mymobilephotography-0.firebaseio.com",
+		projectId: "mymobilephotography-0",
+		storageBucket: "",
+		messagingSenderId: "97074567411"
+		};
+		firebase.initializeApp(config);
+		
+		//create database reference
+		const db = firebase.firestore();
+	</script>
+	<script src="public/js/index.js"></script>
+</body>
+</html>

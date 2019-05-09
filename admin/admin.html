@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+	<title>Admin - My Mobile Photography</title>
+	
+	<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-storage.js"></script>
+	
+	<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+	<form id="login">
+		<section>
+			<h1>Login with email</h1>
+			<input type="email" id="email" required autocomplete="off" placeholder="Email">
+			<input type="password" id="password" required autocomplete="off" placeholder="Password">
+			<button type="submit" id="log_in">Log In</button>
+		</section>
+	</form>
+	
+
+	<main class="admin">
+		<button id="add_image">&plus;</button>
+	</main>
+	
+	<form id="upload_form">
+		<section>
+			<input type="file" id="file_input" accept="image/jpeg, image/jpg, image/png, image/JPG">
+			<img src="test.jpg" id="preview_image">
+			<button id="submit_btn" type="submit">Add Image</button>
+			<div id="upload_status"></div>
+			<p id="upload_percentage">0%</p>
+		</section>
+	</form>
+	
+	<div id="delete_dialog">
+		<section>
+			<h2>Delete this image?</h2>
+			<button id="yes">Yes</button>
+			<button id="no">No</button>
+			<p id="deleting">Deleting..</p>
+		</section>
+	</div>
+	
+	<div id="delete_alert">
+		<section>
+			<h2>Can't delete this image yet!</h2>
+			<button id="ok">Okay</button>
+		</section>
+	</div>
+	
+	
+	
+	<script src="../public/js/jquery.js"></script>
+	<script>
+		// Initialize Firebase
+		var config = {
+		apiKey: "AIzaSyDglxbovvAF5Kpxb84_Pegigcit7NA0k_U",
+		authDomain: "mymobilephotography-0.firebaseapp.com",
+		databaseURL: "https://mymobilephotography-0.firebaseio.com",
+		projectId: "mymobilephotography-0",
+		storageBucket: "gs://mymobilephotography-0.appspot.com",
+		messagingSenderId: "97074567411"
+		};
+		firebase.initializeApp(config);
+		
+		//create database reference
+		const db = firebase.firestore();
+		//create auth reference
+		const auth = firebase.auth();
+	</script>
+	<script src="admin.js"></script>
+</body>
+</html>

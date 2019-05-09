@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:900|Open+Sans');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+/*loading*/
+#loading {
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10000;
+	background: #fff;
+	border: 0;
+	outline: 0;
+}
+
+#loading img {
+	width: 100px;
+}
+
+
+
+
+
+
+
+
+
+/*header*/
+header {
+	display: block;
+	width: 100%;
+	padding-top: 50px;
+	background: #fff;
+	position: sticky;
+	z-index: 1000;
+	top: -130px;
+}
+
+#title {
+	display: block;
+	width: 100%;
+	line-height: 60px;
+	font-size: 60px;
+	font-family: 'Playfair Display', serif;
+	color: #222;
+	text-align: center;
+}
+
+#menu_btn {
+	display: none;
+}
+
+#menu {
+	display: block;
+	width: 100%;
+	text-align: center;
+	font-size: 0;
+	margin-top: 20px;
+}
+
+#menu a {
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 60px;
+	font-size: 20px;
+	padding: 0 30px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: normal;
+	color: #777;
+}
+
+@media only screen and (max-width: 1600px){
+	
+	header {
+		top: -110px;
+	}
+	
+	#title {
+		line-height: 50px;
+		font-size: 50px;
+	}
+	
+	#menu {
+		margin-top: 10px;
+	}
+	
+	#menu a {
+		line-height: 50px;
+		font-size: 16px;
+	}
+	
+}
+
+@media only screen and (max-width: 1000px){
+	
+	header {
+		top: -95px
+	}
+	
+	#title {
+		line-height: 35px;
+		font-size: 35px;
+	}
+	
+	#menu a {
+		line-height: 40px;
+		font-size: 13px;
+		padding: 0 20px;
+	}
+	
+}
+
+@media only screen and (max-width: 700px){
+	
+	header {
+		padding-top: 0;
+		position: fixed;
+		top: 0;
+		left: 0;
+	}
+	
+	#title {
+		line-height: 60px;
+		background: #fff;
+		font-size: 25px;
+		position: relative;
+		z-index: 900;
+	}
+	
+	#menu_btn {
+		display: inline-block;
+		width: 25px;
+		height: 60px;
+		vertical-align: top;
+		border: 0;
+		outline: 0;
+		margin-left: 30px;
+		background: transparent;
+	}
+	
+	#menu_btn span {
+		display: block;
+		width: 100%;
+		height: 2px;
+		background: #aaa;
+		margin: 6px auto;
+		border-radius: 1px;
+		transition: .4s;
+		transform-origin: left;
+	}
+	
+	#menu {
+		display: block;
+		width: 100%;
+		position: absolute;
+		top: -400px;
+		left: 0;
+		background: #fff;
+		padding: 70px 0 100px 0;
+		margin-top: 0;
+		border-bottom: 1px dotted #aaa;
+	}
+	
+	#menu a {
+		display: block;
+		width: 100%;
+		text-align: center;
+		line-height: 50px;
+	}
+	
+}
+
+@media only screen and (max-width: 500px){
+	
+	#title {
+		font-size: 20px;
+	}
+	
+	#menu_btn {
+		margin-left: 20px;
+	}
+	
+}
+
+@media only screen and (max-width: 300px){
+	
+	#title {
+		font-size: 16px;
+	}
+	
+	#menu_btn {
+		margin-left: 14px;
+	}
+	
+}
+
+
+
+
+
+
+
+
+/*main*/
+main {
+	display: block;
+	width: 1600px;
+	padding: 50px 25px;
+	margin: 0 auto;
+	font-size: 0;
+}
+
+.column {
+	display: inline-block;
+	vertical-align: top;
+	width: 33.333333333%;
+	border-left: 25px solid #fff;
+	border-right: 25px solid #fff;
+}
+
+.image {
+	display: block;
+	width: 100%;
+	margin-bottom: 50px;
+	border: 1px dotted #aaa;
+	padding: 20px;
+}
+
+@media only screen and (max-width: 1600px){
+	
+	main {
+		width: 100%;
+		padding: 40px;
+	}
+	
+	.column {
+		border: 0;
+		width: 32%;
+	}
+	
+	#first {
+		margin-right: 2%;
+	}
+	
+	#third {
+		margin-left: 2%;
+	}
+	
+	.image {
+		padding: 15px;
+		margin-bottom: 20px;
+	}
+	
+}
+
+@media only screen and (max-width: 900px){
+	
+	main {
+		padding: 20px;
+	}
+	
+	.column {
+		width: 33.333333%;
+		border-left: 10px solid #fff;
+		border-right: 10px solid #fff;
+	}
+	
+	#first {
+		margin-right: 0;
+	}
+	
+	#third {
+		margin-left: 0;
+	}
+	
+	.image {
+		padding: 0;
+		border: 0;
+	}
+	
+}
+
+@media only screen and (max-width: 700px){
+	
+	main {
+		margin-top: 60px;
+		padding: 4px 2px;
+	}
+	
+	.column {
+		border-left: 2px solid #fff;
+		border-right: 2px solid #fff;
+	}
+	
+	.image {
+		margin-bottom: 4px;
+	}
+	
+}
+
+@media only screen and (max-width: 500px){
+	
+	main {
+		padding: 4px;
+	}
+	
+	.column {
+		display: block;
+		width: 100%;
+		border: 0;
+	}
+	
+	.image {
+		margin-bottom: 4px;
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,367 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+
+
+
+/*login*/
+#login {
+	display: none;
+	width: 100%;
+	height: 100%;
+	background: #222;
+	background: linear-gradient(to bottom, #222, #000);
+	position: fixed;
+	z-index: 1000;
+	top: 0;
+	left: 0;
+}
+
+#login section {
+	display: block;
+	width: 300px;
+	padding: 20px;
+	background: transparent;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	margin: 0 auto;
+}
+
+#login h1 {
+	display: block;
+	width: 100%;
+	line-height: 30px;
+	font-size: 20px;
+	color: #fff;
+	font-family: sans-serif;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+#login section input {
+	display: block;
+	width: 100%;
+	line-height: 40px;
+	border: 1px solid #fff;
+	color: #fff;
+	outline: 0;
+	background: transparent;
+	padding: 0 15px;
+	font-size: 14px;
+	font-family: sans-serif;
+	border-radius: 20px;
+	margin-bottom: 10px;
+}
+
+#log_in {
+	display: block;
+	width: 100%;
+	height: 40px;
+	border: 1px solid #fff;
+	outline: 0;
+	background: transparent;
+	color: #fff;
+	font-family: sans-serif;
+	font-size: 14px;
+	border-radius: 20px;
+}
+
+
+
+
+
+
+/*admin*/
+.admin {
+	display: none;
+}
+
+
+
+/*main*/
+main {
+	width: 100%;
+	font-size: 0;
+	padding: 4px;
+}
+
+#add_image {
+	display: inline-block;
+	vertical-align: middle;
+	width: 25%;
+	height: 15vw;
+	background: #fff;
+	border: 4px solid #fff;
+	outline: 0;
+	font-size: 5vw;
+	color: #555;
+}
+
+.image {
+	display: inline-block;
+	vertical-align: middle;
+	width: 25%;
+	height: 15vw;
+	object-fit: cover;
+	border: 4px solid #fff;
+}
+
+@media only screen and (max-width: 1000px){
+	
+	#add_image {
+		width: 33.333333333%;
+		height: 20vw;
+	}
+	
+	.image {
+		width: 33.333333333%;
+		height: 20vw;
+	}
+	
+}
+
+@media only screen and (max-width: 700px){
+	
+	#add_image {
+		width: 50%;
+		height: 30vw;
+	}
+	
+	.image {
+		width: 50%;
+		height: 30vw;
+	}
+	
+}
+
+@media only screen and (max-width: 400px){
+	
+	main {
+		padding: 10px;
+	}
+	
+	#add_image {
+		display: block;
+		width: 100%;
+		height: 70vw;
+		border: 0;
+		height: 100px;
+		margin-bottom: 10px;
+		font-size: 50px;
+	}
+	
+	.image {
+		display: block;
+		width: 100%;
+		height: 70vw;
+		border: 0;
+		height: auto;
+		margin-bottom: 10px;
+	}
+	
+}
+
+
+
+
+
+/*upload form*/
+#upload_form {
+	display: none;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,.9);
+}
+
+#upload_form section {
+	display: block;
+	width: 300px;
+	background: #fff;
+	margin: 0 auto;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	overflow: hidden;
+	font-size: 0;
+}
+
+#file_input {
+	display: block;
+	width: 100%;
+	position: absolute;
+	top: -100%;
+}
+
+#preview_image {
+	display: none;
+	width: 100%;
+}
+
+#submit_btn {
+	display: none;
+	width: 100%;
+	height: 40px;
+	background: #4d004d;
+	color: #fff;
+	border: 0;
+	outline: 0;
+	font-size: 14px;
+}
+
+#upload_status {
+	display: none;
+	width: 0%;
+	height: 5px;
+	background: #090;
+}
+
+#upload_percentage {
+	display: none;
+	width: 100%;
+	line-height: 14px;
+	text-align: center;
+	font-size: 10px;
+	color: #222;
+	margin-top: 5px;
+}
+
+
+
+
+
+/*delete dialog*/
+#delete_dialog {
+	display: none;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 200;
+	background: rgba(0,0,0,.9);
+}
+
+#delete_dialog section {
+	display: block;
+	width: 300px;
+	padding: 20px;
+	background: #fff;
+	margin: 0 auto;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 0;
+}
+
+#delete_dialog section h2 {
+	display: block;
+	width: 100%;
+	line-height: 30px;
+	font-size: 20px;
+	color: #111;
+	font-family: serif;
+	margin-bottom: 10px;
+}
+
+#delete_dialog section button {
+	display: inline-block;
+	width: 50%;
+	height: 30px;
+	font-size: 14px;
+	color: #111;
+	font-family: sans-serif;
+	outline: 0;
+}
+
+#deleting {
+	display: none;
+	width: 100%;
+	line-height: 30px;
+	font-size: 16px;
+	font-family: sans-serif;
+	color: #111;
+	margin-top: 10px;
+}
+
+
+/*delete alert*/
+#delete_alert {
+	display: none;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 200;
+	background: rgba(0,0,0,.9);
+}
+
+#delete_alert section {
+	display: block;
+	width: 300px;
+	padding: 20px;
+	background: #fff;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	margin: 0 auto;
+}
+
+#delete_alert section h2 {
+	display: block;
+	width: 100%;
+	line-height: 30px;
+	font-size: 20px;
+	color: #111;
+	font-family: serif;
+	margin-bottom: 10px;
+}
+
+#ok {
+	display: block;
+	width: 40%;
+	height: 30px;
+	outline: 0;
+	margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
